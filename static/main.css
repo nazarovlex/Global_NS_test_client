@@ -1,0 +1,63 @@
+.home_body {
+    background-color: #38B6FF;
+}
+
+#logo {
+    position: absolute;
+    width: 15%;
+    right: 42.5%;
+    top: 15%;
+}
+
+#home_input {
+    background-color: #2D3848;
+    color: #6C9AAF;
+    outline: 0;
+    outline-offset: 0;
+    border-color: #2D3848;
+}
+
+input[type="text"]::-webkit-input-placeholder { /* WebKit browsers */
+    color: #6C9AAF;
+}
+
+input[type="text"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #6C9AAF;
+}
+
+input[type="text"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #6C9AAF;
+}
+
+input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #6C9AAF;
+}
+
+#name:focus, #name:active, #phone:focus, #phone:active {
+    box-shadow: none !important;
+}
+
+#home_screen_button {
+    background-color: #F4CC0D;
+    color: #423D4B;
+    position: absolute;
+    right: 0;
+}
+
+#home_screen_button:focus, #home_screen_button:active {
+    box-shadow: none !important;
+}
+
+.toast {
+    position: absolute;
+    left: 85%;
+    background-color: #2D3848;
+    color: #6C9AAF;
+    text-align: center;
+    width: 15%;
+    font-size: 16px;
+}
+
+.text {
+    color: #423D4B;
+}
