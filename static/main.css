@@ -42,6 +42,7 @@ input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #423D4B;
     position: absolute;
     right: 0;
+    width: 274px;
 }
 
 #home_screen_button:focus, #home_screen_button:active {
@@ -51,13 +52,17 @@ input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10+ */
 .toast {
     position: absolute;
     left: 85%;
-    background-color: #2D3848;
-    color: #6C9AAF;
+    background-color: #F4CC0D;
+    color: #423D4B;
     text-align: center;
     width: 15%;
     font-size: 16px;
 }
 
-.text {
+#bordered_text {
     color: #423D4B;
+    padding: 10px;
+    background-color: #F4CC0D;
+    border-radius: 10px;
+    border: 3px solid #423D4B;
 }

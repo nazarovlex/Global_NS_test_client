@@ -31,9 +31,13 @@ def result():
     name = request.form.get("name")
     phone = request.form.get("phone")
 
+    # check name & phone
+    if name == "" or phone == "":
+        return render_template("login.html", input_error=True)
+
     # phone number validation
     if not re.compile(r'^\+?\d{1,3}[-.\s]?\d{3,4}[-.\s]?\d{3,4}$').match(phone):
-        return render_template("login.html", phone_error=True)
+        return render_template("login.html", validation_error=True)
 
     # duplicates check
     current_db = mongo_init()

@@ -1,7 +1,7 @@
 
 .PHONY: build
 build:
-	docker-compose build
+	sudo docker-compose build
 
 .PHONY: start
 start:
@@ -14,7 +14,7 @@ stop:
 .PHONY: clean
 clean:
 	sudo rm -rf .artifacts
-	docker system prune
+	sudo docker system prune
 
 .PHONY: restart
 restart:

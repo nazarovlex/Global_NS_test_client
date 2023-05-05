@@ -19,25 +19,32 @@
 <body class="home_body">
 <form action="/response" method="POST">
     {% if login_error %}
-    <div class="toast" data-autohide="false">
-        <div class="toast-body">
-            Этот номер телефона уже используется.
+        <div class="toast" data-autohide="false">
+            <div class="toast-body">
+                Этот номер телефона уже используется.
+            </div>
         </div>
-    </div>
     {% endif %}
     {% if server_error %}
-    <div class="toast" data-autohide="false">
-        <div class="toast-body">
-            Ошибка сервера
+        <div class="toast" data-autohide="false">
+            <div class="toast-body">
+                Ошибка сервера.
+            </div>
         </div>
-    </div>
     {% endif %}
-    {% if phone_error %}
-    <div class="toast" data-autohide="false">
-        <div class="toast-body">
-            Введите валидный номер телефона
+    {% if validation_error %}
+        <div class="toast" data-autohide="false">
+            <div class="toast-body">
+                Введите валидный номер телефона.
+            </div>
         </div>
-    </div>
+    {% endif %}
+    {% if input_error %}
+        <div class="toast" data-autohide="false">
+            <div class="toast-body">
+                Заполните оба поля.
+            </div>
+        </div>
     {% endif %}
     <img id="logo" src="static/images/logo.png">
     <div class="inline-group position-absolute top-50 start-50 translate-middle">
@@ -48,12 +55,8 @@
                 <input id="phone" name="phone" class="form-control" formmethod="post" type="text"
                        placeholder="Введите ваш номер телефона" autocomplete="off">
             </div>
-
         </div>
-<!--        <div class="btn-group me-2">-->
-                <button id="home_screen_button" class="btn">ОК
-                </button>
-<!--            </div>-->
+        <button id="home_screen_button" class="btn">ОК</button>
     </div>
 
 </form>
